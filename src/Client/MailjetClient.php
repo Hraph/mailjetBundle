@@ -16,7 +16,7 @@ class MailjetClient extends Client
      * @param array $options
      * @return Response
      */
-    public function post(array $resource, array $args = [], array $options = []): Response
+    public function post($resource, $args = [], $options = [])
     {
         $response = parent::post($resource, $args, $options);
         $this->calls[] = [
@@ -38,7 +38,7 @@ class MailjetClient extends Client
      * @param array $options
      * @return Response
      */
-    public function get(array $resource, array $args = [], array $options = []): Response
+    public function get($resource, $args = [], $options = [])
     {
         $response = parent::get($resource, $args, $options);
         $this->calls[] = [
@@ -60,7 +60,7 @@ class MailjetClient extends Client
      * @param array $options
      * @return Response
      */
-    public function put(array $resource, array $args = [], array $options = []): Response
+    public function put($resource, $args = [], $options = [])
     {
         $response = parent::put($resource, $args, $options);
         $this->calls[] = [
@@ -82,7 +82,7 @@ class MailjetClient extends Client
      * @param array $options
      * @return Response
      */
-    public function delete(array $resource, array $args = [], array $options = []): Response
+    public function delete($resource, $args = [], $options = [])
     {
         $response = parent::delete($resource, $args, $options);
         $this->calls[] = [
